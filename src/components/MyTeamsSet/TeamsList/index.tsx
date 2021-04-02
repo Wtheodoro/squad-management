@@ -1,9 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import AllTypesReducer from '../../../store/ducks/AllTypesReducer';
+import { TeamType } from '../../../store/ducks/myTeams/types';
 import TeamTrack from '../TeamTrack';
 
 import { Container } from './styles';
 
 const TeamsList = () => {
+
+  const myTeams = useSelector((state: AllTypesReducer) => state.reducerMyTeams.myTeams)
+
   return (
     <Container>
       <div className="top-list">
@@ -15,11 +21,11 @@ const TeamsList = () => {
         </div>
       </div>
       <div className="bottom-list">
-        <TeamTrack />
-        <TeamTrack />
-        <TeamTrack />
-        <TeamTrack />
-        <TeamTrack />
+        {
+          myTeams?.map((i: TeamType) => (
+            <TeamTrack name={i.name} description={i.description} key={i.name}/>
+          ))
+        }
       </div>
     </Container>
   )
