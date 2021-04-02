@@ -20,6 +20,7 @@ const TeamsList = () => {
           <p>Description</p>
         </div>
       </div>
+      
       <div className="bottom-list">
         {
           myTeams?.map((i: TeamType) => (

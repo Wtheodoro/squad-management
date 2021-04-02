@@ -10,4 +10,9 @@ export const Container = styled.div`
         justify-content: space-evenly;
         align-items: center;
     }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+    }
 `;
