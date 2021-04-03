@@ -15,5 +15,21 @@ export const Container = styled.div`
             margin-left: 1rem;
             width: 70%;
         }
+
+        .name,
+        .description {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                margin-right: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 `;
