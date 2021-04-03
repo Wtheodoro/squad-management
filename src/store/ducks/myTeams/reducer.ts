@@ -30,7 +30,7 @@ const reducerMyTeams = (state = INITIAL_MYTEAMS_STATE, action: any) => {
     switch(action.type) {
         case MyTeamsEnumTypes.GET_TEAMS:
             return {
-                ...state
+                myTeams: action.payload
             }
         case MyTeamsEnumTypes.POST_TEAMS:
             return {

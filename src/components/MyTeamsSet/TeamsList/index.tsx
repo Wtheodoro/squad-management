@@ -9,13 +9,19 @@ import sort from '../../../hooks/sortHook';
 
 const TeamsList = () => {
   const myTeams = useSelector((state: AllTypesReducer) => state.reducerMyTeams.myTeams)
+  const [list, setList] = useState<TeamType[]>()
+
+  useEffect(() => {
+    setList(myTeams)
+  }, [])
+
 
   const sortByName = () => {
-    sort(myTeams, 'name')
+    setList(sort(myTeams, 'name'))
   }
 
   const sortByDescription = () => {
-    sort(myTeams, 'description')
+    setList(sort(myTeams, 'description'))
   }
 
   return (
@@ -31,7 +37,7 @@ const TeamsList = () => {
       
       <div className="bottom-list">
         {
-          myTeams?.map((i: TeamType) => (
+          list?.map((i: TeamType) => (
             <TeamTrack name={i.name} description={i.description} key={i.name}/>
           ))
         }
@@ -41,3 +47,7 @@ const TeamsList = () => {
 }
 
 export default TeamsList;
+
+function loadChangeMyTeams(newList: void): any {
+  throw new Error('Function not implemented.');
+}

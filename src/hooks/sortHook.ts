@@ -12,7 +12,7 @@ const sort = (teams: TeamType[], sortParam: string) => {
         teams[max_location] = teams[j]
         teams[j] = max_obj
     }
-    // return teams
+    return teams
 }
 
 const getMaxTeamObject = (arr: any, start: any, param: any) => {
