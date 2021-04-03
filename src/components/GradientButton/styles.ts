@@ -5,10 +5,10 @@ interface ContainerProps {
 }
 
 export const Container = styled.button<ContainerProps>`
-    min-height: 3rem;
-    min-width: 3rem;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
     width: ${props => props.width};
-    font-size: 3rem;
+    font-size: 2rem;
     background: linear-gradient(to bottom, rgb(192, 14, 79) , rgb(139, 31, 110));
     color: white;
     border-radius: 5px;
@@ -23,4 +23,6 @@ export const Container = styled.button<ContainerProps>`
     &:hover {
         box-shadow: 0 0 1em rgb(255, 100, 230);
     }
+
+    text-decoration: none;
 `;

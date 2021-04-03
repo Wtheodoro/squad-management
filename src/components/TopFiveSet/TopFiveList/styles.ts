@@ -7,6 +7,10 @@ export const Container = styled.div`
     .left-list,
     .right-list {
         padding: 0 1rem 1rem;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
     }
 
 

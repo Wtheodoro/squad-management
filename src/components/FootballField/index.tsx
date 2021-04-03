@@ -7,7 +7,9 @@ const FutballField = () => {
     <Container>
       <div className="atk">
         <p>Most picked player</p>
-        <img src="http://portalmorada.com.br/assets/uploads/noticias/ha-63-anos-pele-fazia-o-seu-1o-gol-em-jogo-oficial-pelo-santos-f6Fv.jpg" alt="pelé"/>
+        <div className="dashed circle">
+          <img src="http://portalmorada.com.br/assets/uploads/noticias/ha-63-anos-pele-fazia-o-seu-1o-gol-em-jogo-oficial-pelo-santos-f6Fv.jpg" alt="pelé"/>
+        </div>
         <p className="percentage">
           75%
         </p>
@@ -17,7 +19,9 @@ const FutballField = () => {
       </div>
       <div className="def">
         <p>Less picked player</p>
-        <img src="http://portalmorada.com.br/assets/uploads/noticias/ha-63-anos-pele-fazia-o-seu-1o-gol-em-jogo-oficial-pelo-santos-f6Fv.jpg" alt="pelé"/>
+        <div className="red circle">
+          <img src="http://portalmorada.com.br/assets/uploads/noticias/ha-63-anos-pele-fazia-o-seu-1o-gol-em-jogo-oficial-pelo-santos-f6Fv.jpg" alt="pelé"/>
+        </div>
         <p className="percentage">
           25%
         </p>

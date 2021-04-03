@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
     color: #FFF;
     background: linear-gradient(to bottom, rgb(192, 14, 79) , rgb(139, 31, 110));
-    height: 25vh;
+    height: 33vh;
     border-radius: 14px;
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
     position: relative;
 
     .middle {
@@ -17,17 +18,17 @@ export const Container = styled.div`
         border: 1px solid #FFF;
 
         position: absolute;
-        top: 25%;
+        top: 30%;
         left: 44%;
 
         .center-line {
             width: 1px;
-            height: 30vh;
+            height: 40vh;
             background-color: #FFF;
 
             position: absolute;
             left: 50%;
-            top: -60%;
+            top: -100%;
         }
     }
 
@@ -44,7 +45,25 @@ export const Container = styled.div`
         .percentage{
             position: absolute;
             top: 20%;
-            left: 85%;
+            left: 90%;
         }
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    .circle {
+        padding: 0.3rem;
+        border-radius: 50%;
+
+    }
+
+    .red {
+        border: 3px solid red;
+    }
+
+    .dashed {
+        border: 3px dashed #FFF;
     }
 `;

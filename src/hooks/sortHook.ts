@@ -1,6 +1,6 @@
 import { TeamType } from "../store/ducks/myTeams/types"
 
-const sort = (teams: TeamType[], sortParam: any) => {
+const sort = (teams: TeamType[], sortParam: string) => {
     for (let j = 0; j < teams.length - 1; j++) {
         let max_obj = teams[j]
         let max_location = j
