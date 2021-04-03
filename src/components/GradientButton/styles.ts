@@ -4,14 +4,14 @@ interface ContainerProps {
     width?: string
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.button<ContainerProps>`
     min-height: 3rem;
     min-width: 3rem;
     width: ${props => props.width};
     font-size: 3rem;
     background: linear-gradient(to bottom, rgb(192, 14, 79) , rgb(139, 31, 110));
     color: white;
-    border-radius: 14px;
+    border-radius: 5px;
 
     display: flex;
     justify-content: center;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GradientButton from '../../GradientButton';
 import TeamsList from '../TeamsList';
 
@@ -9,7 +10,10 @@ const MyTeams = () => {
     <Container>
       <div className="top">
         <h1>My Teams</h1>
-        <GradientButton> + </GradientButton>
+
+        <Link to='/create'>
+          <GradientButton> + </GradientButton>
+        </Link>
       </div>
       <TeamsList />
     </Container>

@@ -6,7 +6,7 @@ import { loadDeleteMyTeams } from '../../../store/ducks/myTeams/actions';
 
 interface TeamProps {
   name: string
-  description: string
+  description?: string
 }
 const TeamTrack = (props: TeamProps) => {
 

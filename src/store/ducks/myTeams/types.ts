@@ -10,8 +10,9 @@ export interface MyTeamsInitialState {
 
 export interface TeamType {
     name: string
-    description: string
+    description?: string
     website?: string
     type: string
     tags?: string | string[]
+    athlete?: any
 }
