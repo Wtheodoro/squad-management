@@ -25,38 +25,52 @@ const AddTeam = () => {
       <div className="content">
         <h1>Create your team</h1>
 
-        <div className="from">
+        {/* <div className="form"> */}
 
           <form onSubmit={handleSubmit(registerTeam)}>
-            <div className="team-information">
+          <h2>Team information</h2>
 
-              <div>
+            <div className="team-information">
+            <div className="left">
+              <div className="label-input">
                 <label htmlFor="">Team Name</label><br/>
                 <input type="text" {...register("name")}/>
               </div>
 
-              <div>
+              <div className="label-input">
                 <label htmlFor="">Description</label><br/>
-                <input type="text" {...register("description")}/>
+                <textarea rows={10} cols={40}  {...register("description")}></textarea>
               </div>
-
-              <div>
+          </div>
+          
+          <div className="right">
+            <div className="label-input">
                 <label htmlFor="">Team website</label><br/>
-                <input type="text" placeholder="only if it exists" {...register("website")}/>
-              </div>
+                <input type="url" placeholder="only if it exists" {...register("website")}/>
+            </div>
 
-              <div>
-                <p>Team Type</p>
+            <div className="label-input">
+              <p>Team Type</p>
 
-                <label htmlFor="">Real</label>
-                <input type="radio" value="real" {...register("type")}/>
+              <label htmlFor="">Real</label>
+              <input type="radio" value="real" {...register("type")}/>
 
-                <label htmlFor="">Fantasy</label>
-                <input type="radio" value="fantasy" {...register("type")}/>
-              </div>
+              <label htmlFor="">Fantasy</label>
+              <input type="radio" value="fantasy" {...register("type")}/>
+            </div>
+
+            <div className="label-input">
+                <label htmlFor="">Tags</label><br/>
+                <textarea rows={6} cols={40} {...register("website")}></textarea>
+            </div>
+          </div>
+
+              
               
 
             </div>
+          <h2>Configure Squad</h2>
+
             <div className="configure-squad">
               <div className="left">
                 <ConfigureSquadField />
@@ -72,7 +86,7 @@ const AddTeam = () => {
 
         </div>
         
-      </div>
+      {/* </div> */}
       {/* <BottomBar /> */}
     </Container>
   )
