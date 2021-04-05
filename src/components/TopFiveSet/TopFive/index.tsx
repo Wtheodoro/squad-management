@@ -1,7 +1,7 @@
 import React from 'react';
 import TopFiveList from '../TopFiveList';
-
 import { Container } from './styles';
+import { config as dotenv} from 'dotenv'
 
 const TopFive = () => {
   return (

@@ -14,9 +14,6 @@ const TopFiveList = () => {
     dispatch(loadGetTeamsRequest())
   }, [])
 
-  console.log(myTeams)
-
-
   return (
     <Container>
       <div className="left-list">
