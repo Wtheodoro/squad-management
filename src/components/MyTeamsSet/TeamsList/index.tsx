@@ -10,18 +10,29 @@ import sort from '../../../hooks/sortHook';
 const TeamsList = () => {
   const myTeams = useSelector((state: AllTypesReducer) => state.reducerMyTeams.myTeams)
   const [list, setList] = useState<TeamType[]>()
+  const [count, setCount] = useState<any>(0)
 
   useEffect(() => {
-    setList(myTeams)
-  }, [])
+
+    if (!list) {
+      setList(myTeams)   
+    }
+
+  }, [count])
 
 
   const sortByName = () => {
-    setList(sort(myTeams, 'name'))
+    if (myTeams) {
+      setList(sort(myTeams, 'name'))
+      setCount(count+1)
+    }
   }
 
   const sortByDescription = () => {
-    setList(sort(myTeams, 'description'))
+    if (myTeams) {
+      setList(sort(myTeams, 'description'))
+      setCount(count+1)
+    }
   }
 
   return (

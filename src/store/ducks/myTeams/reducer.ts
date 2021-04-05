@@ -23,7 +23,7 @@ const time3 = {
 
 
 const INITIAL_MYTEAMS_STATE: MyTeamsInitialState = {
-    myTeams:[time1, time2, time3]
+    myTeams:[]
 }
 
 const reducerMyTeams = (state = INITIAL_MYTEAMS_STATE, action: any) => {
