@@ -2,8 +2,6 @@
 
 # Api Keys
 /utils/KEYS.ts
-.KEYS.ts
-KEYS.ts
 
 # dependencies
 /node_modules
