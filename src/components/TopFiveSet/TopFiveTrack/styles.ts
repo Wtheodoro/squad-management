@@ -9,8 +9,14 @@ export const Container = styled.div`
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     p {
         padding: 0 1rem;
+    }
+
+    img {
+        height: 1.5rem;
+        margin-right: 1rem;
     }
 `;

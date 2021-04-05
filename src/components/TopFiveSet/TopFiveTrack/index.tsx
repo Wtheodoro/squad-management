@@ -2,14 +2,20 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const TopFiveTrack = () => {
+interface TopFiveProps {
+  nome: string
+  escudo: string
+}
+
+const TopFiveTrack = (props: TopFiveProps) => {
+  const { nome, escudo } = props
   return (
     <Container>
       <div className="name">
-        <p>Inter Milan</p>
+        <p>{nome}</p>
       </div>
       <div className="constant">
-        <p>31.9</p>
+        <img src={escudo} alt={nome}/>
       </div>
     </Container>
   )
