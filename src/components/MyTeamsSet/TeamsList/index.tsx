@@ -49,7 +49,7 @@ const TeamsList = () => {
       <div className="bottom-list">
         {
           list?.map((i: TeamType) => (
-            <TeamTrack name={i.name} description={i.description} key={i.name}/>
+            <TeamTrack team={i} key={i.name}/>
           ))
         }
       </div>

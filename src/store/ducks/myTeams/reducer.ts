@@ -28,9 +28,11 @@ const INITIAL_MYTEAMS_STATE: MyTeamsInitialState = {
 
 const reducerMyTeams = (state = INITIAL_MYTEAMS_STATE, action: any) => {
     switch(action.type) {
-        case MyTeamsEnumTypes.GET_TEAMS:
+        case MyTeamsEnumTypes.PATCH_TEAMS:
+            const indexOfPatchedItem = state.myTeams.findIndex((e: TeamType) => e.name === action.payload.oldName)
+            state.myTeams.splice(indexOfPatchedItem, 1, action.payload.editedTeam)
             return {
-                myTeams: action.payload
+                myTeams: [...state.myTeams]
             }
         case MyTeamsEnumTypes.POST_TEAMS:
             return {

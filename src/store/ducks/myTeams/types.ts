@@ -1,5 +1,5 @@
 export enum MyTeamsEnumTypes {
-    GET_TEAMS = '@GET_TEAMS',
+    PATCH_TEAMS = '@PATCH_TEAMS',
     POST_TEAMS = '@POST_TEAMS',
     DELETE_TEAMS = '@DELETE_TEAMS'
 }
@@ -15,4 +15,25 @@ export interface TeamType {
     type: string
     tags?: string | string[]
     athlete?: any
+}
+
+export interface TeamActionObjectTpe {
+    oldName: string
+    editedTeam: TeamType
+}
+
+export interface EditTeamLocationProps {
+    location: EditTeamStateProps
+}
+
+export interface EditTeamStateProps {
+    state: EditTeamProps
+}
+
+export interface EditTeamProps {
+    team: EditEachTeamProps
+}
+
+export interface EditEachTeamProps {
+    team: TeamType
 }

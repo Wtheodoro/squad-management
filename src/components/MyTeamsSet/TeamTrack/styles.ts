@@ -25,9 +25,6 @@ export const Container = styled.div`
             cursor: pointer;
         }
 
-        svg + svg {
-            margin-left: 1rem;
-        }
     }
 
     &:hover {
@@ -40,5 +37,11 @@ export const Container = styled.div`
                 
             }
         }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        margin-right: 1rem;
     }
 `;

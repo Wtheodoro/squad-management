@@ -3,16 +3,16 @@ import { Container } from './styles';
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { loadDeleteMyTeams } from '../../../store/ducks/myTeams/actions';
+import { Link } from 'react-router-dom';
+import { TeamType } from '../../../store/ducks/myTeams/types';
 
 interface TeamProps {
-  name: string
-  description?: string
+  team: TeamType
 }
 const TeamTrack = (props: TeamProps) => {
 
-  const { name, description } = props
+  const { name, description } = props.team
   const dispatch = useDispatch()
-
 
   const deleteTeam = (name: string) => {
     dispatch(loadDeleteMyTeams(name))
@@ -26,7 +26,14 @@ const TeamTrack = (props: TeamProps) => {
       <div className="team-description">
         {description}
         <div className="icons">
-          <MdEdit />
+
+          <Link to={{
+            pathname:'/edit',
+            state: { team: props}
+          }}>
+            <MdEdit />
+          </Link>
+          
           <MdDelete onClick={()=>deleteTeam(name)}/>
         </div>
       </div>

@@ -5,24 +5,35 @@ import { useDispatch } from 'react-redux'
 import ConfigureSquadField from '../../components/ConfigureSquad/ConfigureSquadField';
 import GradientButton from '../../components/GradientButton';
 import TopBar from '../../components/TopBar';
-import { loadPostMyTeams } from '../../store/ducks/myTeams/actions';
-import { TeamType } from '../../store/ducks/myTeams/types';
-
+import { EditTeamLocationProps, TeamType } from '../../store/ducks/myTeams/types';
 import { Container } from './styles';
+import { loadChangeMyTeam } from '../../store/ducks/myTeams/actions';
 
-const AddTeam = () => {
+
+const EditTeam = (props: EditTeamLocationProps) => {
   const { register, handleSubmit } = useForm()
   const dispatch = useDispatch()
 
-  const registerTeam = (team: TeamType) => {
-    dispatch(loadPostMyTeams(team))
+  const { name, description, website, type } = props.location.state.team.team
+
+  const registerTeam = (editedTeam: TeamType) => {
+
+    const oldNameNTeam = {
+      oldName: name,
+      editedTeam: editedTeam
+    }
+
+    dispatch(loadChangeMyTeam(oldNameNTeam))
   }
+
 
   return (
     <Container>
       <TopBar />
       <div className="content">
         <h1>Create your team</h1>
+
+        {/* <div className="form"> */}
 
           <form onSubmit={handleSubmit(registerTeam)}>
           <h2>Team information</h2>
@@ -31,19 +42,19 @@ const AddTeam = () => {
             <div className="left">
               <div className="label-input">
                 <label htmlFor="">Team Name</label><br/>
-                <input type="text" {...register("name")}/>
+                <input type="text" defaultValue={name} {...register("name")}/>
               </div>
 
               <div className="label-input">
                 <label htmlFor="">Description</label><br/>
-                <textarea rows={10} cols={40}  {...register("description")}/>
+                <textarea rows={10} cols={40} defaultValue={description} {...register("description")}/>
               </div>
           </div>
           
           <div className="right">
             <div className="label-input">
                 <label htmlFor="">Team website</label><br/>
-                <input type="url" placeholder="only if it exists" {...register("website")}/>
+                <input type="url" placeholder="only if it exists" defaultValue={website} {...register("website")}/>
             </div>
 
             <div className="label-input">
@@ -71,7 +82,7 @@ const AddTeam = () => {
             <div className="configure-squad">
               <div className="left">
                 <ConfigureSquadField />
-                <GradientButton width="100%">Send</GradientButton>
+                <GradientButton width="100%">Edit</GradientButton>
                 <Link to='/'>
                   <GradientButton>Home</GradientButton>
                 </Link>
@@ -82,8 +93,11 @@ const AddTeam = () => {
           </form>
 
         </div>
+        
+      {/* </div> */}
+      {/* <BottomBar /> */}
     </Container>
   )
 }
 
-export default AddTeam;
+export default EditTeam;
