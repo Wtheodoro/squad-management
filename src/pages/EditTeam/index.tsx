@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import ConfigureSquadField from '../../components/ConfigureSquad/ConfigureSquadField';
+import ConfigureSquadField from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadField';
 import GradientButton from '../../components/GradientButton';
 import TopBar from '../../components/TopBar';
 import { EditTeamLocationProps, TeamType } from '../../store/ducks/myTeams/types';

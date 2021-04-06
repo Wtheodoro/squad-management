@@ -41,6 +41,12 @@ export const Container = styled.div`
             .label-input:hover {
                 color: rgb(192, 14, 79);
             }
+
+            .configure-squad {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+            }
         }
 
         input {
