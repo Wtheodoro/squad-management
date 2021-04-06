@@ -71,5 +71,6 @@ export const Container = styled.div`
                 outline-color: rgb(192, 14, 79);
             }
         }
+
     }
 `;

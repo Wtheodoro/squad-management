@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import ConfigureSquadField from '../../components/ConfigureSquad/ConfigureSquadField';
@@ -13,6 +13,7 @@ import { loadChangeMyTeam } from '../../store/ducks/myTeams/actions';
 const EditTeam = (props: EditTeamLocationProps) => {
   const { register, handleSubmit } = useForm()
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const { name, description, website, type } = props.location.state.team.team
 
@@ -24,6 +25,8 @@ const EditTeam = (props: EditTeamLocationProps) => {
     }
 
     dispatch(loadChangeMyTeam(oldNameNTeam))
+    history.push('/')
+    
   }
 
 
@@ -32,8 +35,6 @@ const EditTeam = (props: EditTeamLocationProps) => {
       <TopBar />
       <div className="content">
         <h1>Create your team</h1>
-
-        {/* <div className="form"> */}
 
           <form onSubmit={handleSubmit(registerTeam)}>
           <h2>Team information</h2>
@@ -83,19 +84,12 @@ const EditTeam = (props: EditTeamLocationProps) => {
               <div className="left">
                 <ConfigureSquadField />
                 <GradientButton width="100%">Edit</GradientButton>
-                <Link to='/'>
-                  <GradientButton>Home</GradientButton>
-                </Link>
-
               </div>
             </div>
 
           </form>
 
         </div>
-        
-      {/* </div> */}
-      {/* <BottomBar /> */}
     </Container>
   )
 }

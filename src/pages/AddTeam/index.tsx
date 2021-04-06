@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import ConfigureSquadField from '../../components/ConfigureSquad/ConfigureSquadField';
@@ -13,9 +13,11 @@ import { Container } from './styles';
 const AddTeam = () => {
   const { register, handleSubmit } = useForm()
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const registerTeam = (team: TeamType) => {
     dispatch(loadPostMyTeams(team))
+    history.push('/')
   }
 
   return (
@@ -71,11 +73,7 @@ const AddTeam = () => {
             <div className="configure-squad">
               <div className="left">
                 <ConfigureSquadField />
-                <GradientButton width="100%">Send</GradientButton>
-                <Link to='/'>
-                  <GradientButton>Home</GradientButton>
-                </Link>
-
+                <GradientButton width="100%">Save</GradientButton>
               </div>
             </div>
 

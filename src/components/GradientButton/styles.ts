@@ -12,7 +12,7 @@ export const Container = styled.button<ContainerProps>`
     background: linear-gradient(to bottom, rgb(192, 14, 79) , rgb(139, 31, 110));
     color: white;
     border-radius: 5px;
-
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

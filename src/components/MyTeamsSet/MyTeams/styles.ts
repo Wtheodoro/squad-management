@@ -16,6 +16,10 @@ export const Container = styled.div`
         h1 {
             color: rgb(88, 47, 140);
         }
+
+        button {
+            margin-top: 0;
+        }
     }
 
 `;
