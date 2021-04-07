@@ -38,7 +38,7 @@ const EditTeam = (props: EditTeamLocationProps) => {
   }
 
   const filterAthlete = (e: string) => {
-    setAthletes(searchAthlete(e))
+    setAthletes(searchAthlete(e.toLowerCase()))
   }
 
 
@@ -109,7 +109,7 @@ const EditTeam = (props: EditTeamLocationProps) => {
 
               <div className="right">
                 <label htmlFor="">Search Player</label><br/>
-                <input type="text" placeholder="ex: Nikão"
+                <input type="text" placeholder="ex: Ramiro"
                 onChange={(e) => filterAthlete(e.target.value)}
                 />
                 <div className="search-athlete">

@@ -34,7 +34,7 @@ const AddTeam = () => {
   }
 
   const filterAthlete = (e: string) => {
-    setAthletes(searchAthlete(e))
+    setAthletes(searchAthlete(e.toLowerCase()))
   }  
 
   return (
@@ -102,7 +102,7 @@ const AddTeam = () => {
               </div>
               <div className="right">
                 <label htmlFor="">Search Player</label><br/>
-                <input type="text" placeholder="ex: Nikão"
+                <input type="text" placeholder="ex: Ramiro"
                 onChange={(e) => filterAthlete(e.target.value)}
                 />
                 <div className="search-athlete">
