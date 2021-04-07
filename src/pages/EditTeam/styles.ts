@@ -41,7 +41,14 @@ export const Container = styled.div`
             .label-input:hover {
                 color: rgb(192, 14, 79);
             }
+
+            .configure-squad {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+            }
         }
+
 
         input {
             width: 20rem;
@@ -72,5 +79,25 @@ export const Container = styled.div`
             }
         }
 
+    }
+
+    .search-athlete {
+        max-height: 70vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(192, 14, 79);
+            outline: none;
+            border-radius: 15px;
+        }
+    }
+
+    .error {
+        color: red;
     }
 `;
