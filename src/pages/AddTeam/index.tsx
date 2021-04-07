@@ -13,7 +13,8 @@ import AthleteTrack from '../../components/CreateTeamSet/AthleteTrack';
 
 const AddTeam = () => {
   const [athletes, setAthletes] = useState<any>(club_cast)
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, formState:{ errors } } = useForm()
+
   const dispatch = useDispatch()
   const history = useHistory()
 
@@ -28,7 +29,6 @@ const AddTeam = () => {
 
   const searchAthlete = (e: string) => {
     return club_cast.filter(function(el) {
-      // return el.name.toLowerCase().indexOf(e.ToLowerCase()) > -1
       return el.name.toLowerCase().indexOf(e) > -1
     })
   }
@@ -50,12 +50,20 @@ const AddTeam = () => {
             <div className="left">
               <div className="label-input">
                 <label htmlFor="">Team Name</label><br/>
-                <input type="text" {...register("name")}/>
+                <input type="text" {...register("name", { required: true })}/>
+                {
+                  errors.name &&
+                  <p className="error">Team name required</p>
+                }
               </div>
 
               <div className="label-input">
                 <label htmlFor="">Description</label><br/>
-                <textarea rows={10} cols={40}  {...register("description")}/>
+                <textarea rows={10} cols={40}  {...register("description", { required: true })}/>
+                {
+                  errors.description &&
+                  <p className="error">Team name required</p>
+                }
               </div>
           </div>
           
@@ -97,7 +105,7 @@ const AddTeam = () => {
                 <input type="text" placeholder="ex: Nikão"
                 onChange={(e) => filterAthlete(e.target.value)}
                 />
-                <div className="search_athlete">
+                <div className="search-athlete">
                   {
                     athletes?.map((i: any) => (
                       <AthleteTrack name={i.name} age={i.age} nacionality={i.nacionality} key={i.name}/>
@@ -115,3 +123,11 @@ const AddTeam = () => {
 }
 
 export default AddTeam;
+
+function yupResolver(schema: any): import("react-hook-form").Resolver<import("react-hook-form").FieldValues, object> | undefined {
+  throw new Error('Function not implemented.');
+}
+function schema(schema: any): import("react-hook-form").Resolver<import("react-hook-form").FieldValues, object> | undefined {
+  throw new Error('Function not implemented.');
+}
+

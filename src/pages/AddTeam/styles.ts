@@ -38,8 +38,12 @@ export const Container = styled.div`
 
             }
 
-            .label-input:hover {
-                color: rgb(192, 14, 79);
+            .label-input {
+                margin: 1rem 0;
+
+                &:hover {
+                    color: rgb(192, 14, 79);
+                }
             }
 
             .configure-squad {
@@ -53,7 +57,6 @@ export const Container = styled.div`
             width: 20rem;
             border-radius: 5px;
             padding: 0.3rem 0.8rem;
-            margin: 0.5rem 0 1.5rem;
             border: 1px solid #CCC;
 
             &:focus {
@@ -77,5 +80,25 @@ export const Container = styled.div`
                 outline-color: rgb(192, 14, 79);
             }
         }
+    }
+
+    .search-athlete {
+        max-height: 70vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(192, 14, 79);
+            outline: none;
+            border-radius: 15px;
+        }
+    }
+
+    .error {
+        color: red;
     }
 `;
