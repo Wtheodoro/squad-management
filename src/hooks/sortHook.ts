@@ -20,7 +20,7 @@ const getMaxTeamObject = (arr: any, start: any, param: any) => {
     let max_location = start
 
     for (let i = start + 1; i < arr.length; i++) {
-        if (arr[i][param] < maximum[param]) {
+        if (arr[i][param].toLowerCase() < maximum[param].toLowerCase()) {
             maximum = arr[i]
             max_location = i
         }
