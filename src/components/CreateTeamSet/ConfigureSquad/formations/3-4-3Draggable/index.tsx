@@ -1,7 +1,5 @@
 import React from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { Provider } from 'react-redux';
-
+import { Droppable, Draggable } from 'react-beautiful-dnd';
 import { Container } from './styles';
 
 interface FormationProps {
@@ -61,27 +59,5 @@ const ThreeFourThree = (props: FormationProps) => {
     </Container>
   )
 }
-
-        // <Droppable droppableId="athletes">
-        //   {(provided) => (
-        //     <div className="search-athlete" {...provided.droppableProps} ref={provided.innerRef}>
-        //       {
-        //         athletes?.map((i: any, index: any) => (
-        //           <Draggable key={i.name} draggableId={i.name} index={index}>
-        //             {(provided) => (
-        //               <AthleteTrack name={i.name} age={i.age} nacionality={i.nacionality}
-        //               innerRef={provided.innerRef}
-        //               provided={provided}
-        //               />
-        //             )}
-        //           </Draggable>
-        //         ))
-        //       }
-        //       {provided.placeholder}
-        //     </div>
-        //   )}
-        // </Droppable>
-
-
 
 export default ThreeFourThree;

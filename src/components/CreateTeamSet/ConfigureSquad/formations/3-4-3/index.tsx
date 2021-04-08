@@ -1,7 +1,4 @@
 import React from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { Provider } from 'react-redux';
-
 import { Container } from './styles';
 
 const ThreeFourThree = () => {

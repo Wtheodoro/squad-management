@@ -58,7 +58,3 @@ const TeamsList = () => {
 }
 
 export default TeamsList;
-
-function loadChangeMyTeams(newList: void): any {
-  throw new Error('Function not implemented.');
-}

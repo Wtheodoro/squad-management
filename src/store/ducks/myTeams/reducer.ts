@@ -1,27 +1,5 @@
 import { MyTeamsEnumTypes, MyTeamsInitialState, TeamType} from './types'
 
-const time1 = {
-    name: 'Walison Futebol Clube',
-    description: 'Time de pernas de pal',
-    website: 'www.faketime.com',
-    type: 'Fantasy'
-}
-
-const time2 = {
-    name: 'Ponte preta',
-    description: 'Melhor time do interior',
-    website: 'www.pontepreta.com',
-    type: 'Real'
-}
-
-const time3 = {
-    name: 'Tabajara',
-    description: 'A só pra ser primeiro',
-    website: 'www.cacetaeplanta.com',
-    type: 'Fantas'
-}
-
-
 const INITIAL_MYTEAMS_STATE: MyTeamsInitialState = {
     myTeams:[]
 }
