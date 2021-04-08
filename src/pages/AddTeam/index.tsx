@@ -70,7 +70,12 @@ const AddTeam = () => {
           <div className="right">
             <div className="label-input">
                 <label htmlFor="">Team website</label><br/>
-                <input type="url" placeholder="only if it exists" {...register("website")}/>
+                <input type="url" placeholder="only if it exists" {...register("website", { required: true })}
+                />
+                {
+                  errors.website &&
+                  <p className="error">Website required</p>
+                }
             </div>
 
             <div className="label-input">
