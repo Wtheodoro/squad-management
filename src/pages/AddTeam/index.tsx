@@ -88,13 +88,9 @@ const AddTeam = () => {
                 <textarea rows={6} cols={40}/>
             </div>
           </div>
+        </div>
 
-              
-              
-
-            </div>
-          <h2>Configure Squad</h2>
-
+            <h2>Configure Squad</h2>
             <div className="configure-squad">
               <div className="left">
                 <ConfigureSquadField />
@@ -123,11 +119,3 @@ const AddTeam = () => {
 }
 
 export default AddTeam;
-
-function yupResolver(schema: any): import("react-hook-form").Resolver<import("react-hook-form").FieldValues, object> | undefined {
-  throw new Error('Function not implemented.');
-}
-function schema(schema: any): import("react-hook-form").Resolver<import("react-hook-form").FieldValues, object> | undefined {
-  throw new Error('Function not implemented.');
-}
-
