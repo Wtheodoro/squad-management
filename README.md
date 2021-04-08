@@ -37,7 +37,7 @@ I build the application with the latest technologies I learned.
 **The project is under development**
 Ther are a fill things to do yet.
 You can keep an eye on this repository if you want to see it complete.
-**You can see what i'm working on http://localhost:3000/test**
+**Once the application is running in your pc you can see what i'm working on http://localhost:3000/test**
 
 - Implement Drag and Drop
 - Set players squad on team object
