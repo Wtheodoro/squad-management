@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import AthleteTrackDraggable from '../../components/CreateTeamSet/AthleteTrackDraggable';
 import ConfigureSquadFieldDraggable from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadFieldDraggable';
+import TagsInput from '../../components/CreateTeamSet/TagsInput';
 import GradientButton from '../../components/GradientButton';
 import { club_cast } from '../../utils/clubCast'
 import { Container } from './styles';
@@ -10,6 +11,8 @@ const TEST = () => {
   const [athletes, setAthletes] = useState<any>(club_cast)
   const [athletesOnField, setAthletesOnField] = useState<any>([])
   
+
+  // dnd things
   const handleOnDragEnd = (result: any) => {
     console.log(result)
     const items = Array.from(athletes)
@@ -30,7 +33,11 @@ const TEST = () => {
     } else {
       // ainda nao sei o que fazer aqui
     }
-    
+  }
+
+  // tag things
+  const selectedTags = (tags: any) => {
+    console.log(tags)
   }
   
   return (
@@ -66,6 +73,7 @@ const TEST = () => {
           )}
         </Droppable>
       </DragDropContext>
+      <TagsInput selectedTags={selectedTags} predefinedTags={['Ponte preta', 'Macaca', 'TJP']}/>
     </Container>
   )
 }
