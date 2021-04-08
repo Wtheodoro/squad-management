@@ -16,7 +16,8 @@ open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `Api Key`
 On this project ther are requisitions on [API Futebol](https://www.api-futebol.com.br/).
 This api provides free keys with limits.
-If you just want to see the project runing you can use my key, but if you wanto to implement something by yourself you must get your own key.
+If you just want to see the project runing you can use my key, but if you want to implement something by yourself you must get your own key.
+**Api keys goes on repository src/services/teams-service.ts**
 
 ### `npm test`
 You can also run some tests that i made on this application.
