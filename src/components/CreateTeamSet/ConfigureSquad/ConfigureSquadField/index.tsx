@@ -3,18 +3,11 @@ import ThreeFourThree from '../formations/3-4-3';
 
 import { Container } from './styles';
 
-interface ConfigureSquadFieldProps {
-  squad?: any
-}
-
-const ConfigureSquadField = (props: ConfigureSquadFieldProps) => {
-  // if (props.squad) {
-  //   console.log('field',props.squad)
-  // }
+const ConfigureSquadField = () => {
   return (
     <Container>
       <div className="squad">
-        <ThreeFourThree squad={props.squad}/>        
+        <ThreeFourThree/>        
       </div>
 
       <div className="line"/>

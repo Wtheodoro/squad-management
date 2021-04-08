@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import AthleteTrack from '../../components/CreateTeamSet/AthleteTrack';
-import ConfigureSquadField from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadField';
+import AthleteTrackDraggable from '../../components/CreateTeamSet/AthleteTrackDraggable';
+import ConfigureSquadFieldDraggable from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadFieldDraggable';
 import GradientButton from '../../components/GradientButton';
 import { club_cast } from '../../utils/clubCast'
 import { Container } from './styles';
@@ -35,10 +35,14 @@ const TEST = () => {
   
   return (
     <Container>
+      <div className="warning">
+        <h3>Pagina para testar o drag and down</h3>
+        <p>por enquanto so da pra posicionar o goleiro</p>
+      </div>
+      
       <DragDropContext onDragEnd={handleOnDragEnd}>
-
       <div className="left">
-        <ConfigureSquadField squad={athletesOnField}/>
+        <ConfigureSquadFieldDraggable squad={athletesOnField}/>
         <GradientButton width="100%">Save</GradientButton>
       </div>
 
@@ -49,7 +53,7 @@ const TEST = () => {
                 athletes?.map((i: any, index: any) => (
                   <Draggable key={i.name} draggableId={i.name} index={index}>
                     {(provided) => (
-                      <AthleteTrack name={i.name} age={i.age} nacionality={i.nacionality}
+                      <AthleteTrackDraggable name={i.name} age={i.age} nacionality={i.nacionality}
                       innerRef={provided.innerRef}
                       provided={provided}
                       />
