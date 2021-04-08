@@ -1,6 +1,6 @@
 ## Preview
 
-![GIF]()
+![GIF](https://github.com/Wtheodoro/squad-management/blob/main/public/gif/preview.gif)
 
 ### `git clone`
 First you need to clone this repository.
