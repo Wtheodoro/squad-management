@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+## Preview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GIF]()
 
-## Available Scripts
+### `git clone`
+First you need to clone this repository.
 
-In the project directory, you can run:
+### `npm install`
+Second you need to install all dependencies.
+**Make sure you are inside the squad-management repository**
 
 ### `npm start`
-
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Api Key`
+On this project ther are requisitions on [API Futebol](https://www.api-futebol.com.br/).
+This api provides free keys with limits.
+If you just want to see the project runing you can use my key, but if you wanto to implement something by yourself you must get your own key.
 
 ### `npm test`
+You can also run some tests that i made on this application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `used technologies`
+**This project has a study purpose**
+I build the application with the latest technologies I learned.
 
-### `npm run build`
+- React
+- Typescript
+- Redux
+- Saga
+- Styled-components
+- React-beautiful-dnd
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Future implementations`
+**The project is under development**
+Ther are a fill things to do yet.
+You can keep an eye on this repository if you want to see it complete.
+**You can see what i'm working on http://localhost:3000/test**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Implement Drag and Drop
+- Set players squad on team object
