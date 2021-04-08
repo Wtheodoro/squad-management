@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import AddTeam from '../pages/AddTeam';
 import EditTeam from '../pages/EditTeam';

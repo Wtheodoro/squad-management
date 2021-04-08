@@ -1,4 +1,3 @@
-import React from 'react';
 import BottomBar from '../../components/BottomBar';
 import FootballField from '../../components/FootballField';
 import MyTeams from '../../components/MyTeamsSet/MyTeams';

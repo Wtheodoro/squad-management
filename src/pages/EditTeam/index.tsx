@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
@@ -82,7 +82,7 @@ const EditTeam = (props: EditTeamLocationProps) => {
           <div className="right">
             <div className="label-input">
                 <label htmlFor="">Team website</label><br/>
-                <input type="url" placeholder="only if it exists" defaultValue={website} {...register("website", { required: true })}/>
+                <input type="url" defaultValue={website} {...register("website", { required: true })}/>
                 {
                   errors.website &&
                   <p className="error">Website required</p>

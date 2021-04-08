@@ -1,4 +1,3 @@
-import React from 'react';
 import TopFiveList from '../TopFiveList';
 import { Container } from './styles';
 

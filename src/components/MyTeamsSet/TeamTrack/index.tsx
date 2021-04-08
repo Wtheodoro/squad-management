@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from './styles';
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useDispatch } from 'react-redux';

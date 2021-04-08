@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AllTypesReducer from '../../../store/ducks/AllTypesReducer';
 import { loadGetTeamsRequest } from '../../../store/ducks/teamsFromApi/actions';

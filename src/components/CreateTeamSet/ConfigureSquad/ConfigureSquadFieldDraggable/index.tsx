@@ -1,4 +1,3 @@
-import React from 'react';
 import ThreeFourThreeDraggable from '../formations/3-4-3Draggable';
 
 import { Container } from './styles';
