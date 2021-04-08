@@ -12,7 +12,7 @@ const TEST = () => {
   const [athletesOnField, setAthletesOnField] = useState<any>([])
   
 
-  // dnd things
+  // dnd
   const handleOnDragEnd = (result: any) => {
     console.log(result)
     const items = Array.from(athletes)
@@ -31,49 +31,63 @@ const TEST = () => {
         setAthletesOnField([...athletesOnField, player])
       }
     } else {
-      // ainda nao sei o que fazer aqui
+      // CODE
     }
   }
 
-  // tag things
-  const selectedTags = (tags: any) => {
-    console.log(tags)
+  // Search
+
+  const searchAthlete = (e: string) => {
+    return club_cast.filter(function(el) {
+      return el.name.toLowerCase().indexOf(e) > -1
+    })
+  }
+
+  const filterAthlete = (e: string) => {
+    setAthletes(searchAthlete(e.toLowerCase()))
   }
   
   return (
     <Container>
       <div className="warning">
         <h3>Pagina para testar o drag and down</h3>
-        <p>por enquanto so da pra posicionar o goleiro</p>
-      </div>
-      
-      <DragDropContext onDragEnd={handleOnDragEnd}>
-      <div className="left">
-        <ConfigureSquadFieldDraggable squad={athletesOnField}/>
-        <GradientButton width="100%">Save</GradientButton>
+        <p>Já é possivel reorganizar a lista de jogadores</p>
+        <p>Também é possivél posicionar o goleiro</p>
       </div>
 
-        <Droppable droppableId="athletes">
-          {(provided) => (
-            <div className="search-athlete" {...provided.droppableProps} ref={provided.innerRef}>
-              {
-                athletes?.map((i: any, index: any) => (
-                  <Draggable key={i.name} draggableId={i.name} index={index}>
-                    {(provided) => (
-                      <AthleteTrackDraggable name={i.name} age={i.age} nacionality={i.nacionality}
-                      innerRef={provided.innerRef}
-                      provided={provided}
-                      />
-                    )}
-                  </Draggable>
-                ))
-              }
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
+
+      <DragDropContext onDragEnd={handleOnDragEnd}>
+        <div className="field">
+          <ConfigureSquadFieldDraggable squad={athletesOnField}/>
+        </div>
+      
+        <div className="players">
+          <label htmlFor="">Search Player</label><br/>
+          <input type="text" placeholder="ex: Ramiro"
+            onChange={(e) => filterAthlete(e.target.value)}
+          />
+
+          <Droppable droppableId="athletes">
+            {(provided) => (
+              <div className="search-athlete" {...provided.droppableProps} ref={provided.innerRef}>
+                {
+                  athletes?.map((i: any, index: any) => (
+                    <Draggable key={i.name} draggableId={i.name} index={index}>
+                      {(provided) => (
+                        <AthleteTrackDraggable name={i.name} age={i.age} nacionality={i.nacionality}
+                        innerRef={provided.innerRef}
+                        provided={provided}
+                        />
+                      )}
+                    </Draggable>
+                  ))
+                }
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </div>
       </DragDropContext>
-      <TagsInput selectedTags={selectedTags} predefinedTags={['Ponte preta', 'Macaca', 'TJP']}/>
     </Container>
   )
 }
