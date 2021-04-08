@@ -10,19 +10,22 @@ import { TeamType } from '../../store/ducks/myTeams/types';
 import { club_cast } from '../../utils/clubCast'
 import { Container } from './styles';
 import AthleteTrack from '../../components/CreateTeamSet/AthleteTrack';
+import TagsInput from '../../components/CreateTeamSet/TagsInput';
 
 const AddTeam = () => {
   const [athletes, setAthletes] = useState<any>(club_cast)
+  const [tags, setTags] = useState<string[]>(['Ponte preta', 'Macaca', 'TJP'])
   const { register, handleSubmit, formState:{ errors } } = useForm()
 
   const dispatch = useDispatch()
   const history = useHistory()
 
   useEffect(() => {
-    console.log(club_cast)
+    // console.log(club_cast)
   }, [athletes])
 
   const registerTeam = (team: TeamType) => {
+    team.tags = tags
     dispatch(loadPostMyTeams(team))
     history.push('/')
   }
@@ -36,6 +39,10 @@ const AddTeam = () => {
   const filterAthlete = (e: string) => {
     setAthletes(searchAthlete(e.toLowerCase()))
   }  
+
+  const selectedTags = (tags: any) => {
+    setTags(tags)
+  }
 
   return (
     <Container>
@@ -90,7 +97,7 @@ const AddTeam = () => {
 
             <div className="label-input">
                 <label htmlFor="">Tags</label><br/>
-                <textarea rows={6} cols={40}/>
+                <TagsInput selectedTags={selectedTags} predefinedTags={tags}/>
             </div>
           </div>
         </div>

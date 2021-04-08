@@ -10,17 +10,20 @@ import { Container } from './styles';
 import { loadChangeMyTeam } from '../../store/ducks/myTeams/actions';
 import { club_cast } from '../../utils/clubCast'
 import AthleteTrack from '../../components/CreateTeamSet/AthleteTrack';
+import TagsInput from '../../components/CreateTeamSet/TagsInput';
 
 const EditTeam = (props: EditTeamLocationProps) => {
+  const { name, description, website, tags } = props.location.state.team.team
+
   const [athletes, setAthletes] = useState<any>(club_cast)
+  const [tagsEdit, setTagsEdit] = useState<any>(tags)
+
   const { register, handleSubmit, formState:{ errors } } = useForm()
   const dispatch = useDispatch()
   const history = useHistory()
 
-  const { name, description, website, type } = props.location.state.team.team
-
   const registerTeam = (editedTeam: TeamType) => {
-
+    editedTeam.tags = tagsEdit
     const oldNameNTeam = {
       oldName: name,
       editedTeam: editedTeam
@@ -39,6 +42,10 @@ const EditTeam = (props: EditTeamLocationProps) => {
 
   const filterAthlete = (e: string) => {
     setAthletes(searchAthlete(e.toLowerCase()))
+  }
+
+  const selectedTags = (tags: any) => {
+    setTagsEdit(tags)
   }
 
 
@@ -94,7 +101,7 @@ const EditTeam = (props: EditTeamLocationProps) => {
 
             <div className="label-input">
                 <label htmlFor="">Tags</label><br/>
-                <textarea rows={6} cols={40}/>
+                <TagsInput selectedTags={selectedTags} predefinedTags={tagsEdit}/>
             </div>
           </div>
 

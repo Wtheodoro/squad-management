@@ -41,7 +41,7 @@ const TagsInput = (props: TagsInputProps) => {
       </ul>
       <input type="text"
         placeholder="Press enter to add"
-        onKeyUp={event => event.key === "Enter" && addTag(event)}
+        onKeyUp={event => event.key === "Shift" && addTag(event)}
       />
     </Container>
   )

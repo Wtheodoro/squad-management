@@ -13,7 +13,7 @@ export interface TeamType {
     description?: string
     website?: string
     type: string
-    tags?: string | string[]
+    tags?: string[]
     athlete?: any
 }
 
