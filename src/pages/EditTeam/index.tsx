@@ -53,7 +53,7 @@ const EditTeam = (props: EditTeamLocationProps) => {
     <Container>
       <TopBar />
       <div className="content">
-        <h1>Create your team</h1>
+        <h1>Edit your team</h1>
 
           <form onSubmit={handleSubmit(registerTeam)}>
           <h2>Team information</h2>
