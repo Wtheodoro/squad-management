@@ -30,6 +30,10 @@ const AddTeam = () => {
     history.push('/')
   }
 
+  const checkKeyDown = (e: any) => {
+    if (e.code === 'Enter') e.preventDefault()
+  }
+
   const searchAthlete = (e: string) => {
     return club_cast.filter(function(el) {
       return el.name.toLowerCase().indexOf(e) > -1
@@ -50,7 +54,7 @@ const AddTeam = () => {
       <div className="content">
         <h1>Create your team</h1>
 
-          <form onSubmit={handleSubmit(registerTeam)}>
+          <form onSubmit={handleSubmit(registerTeam)} onKeyDown={(e) => checkKeyDown(e)}>
           <h2>Team information</h2>
 
             <div className="team-information">

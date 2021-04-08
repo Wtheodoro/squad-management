@@ -13,10 +13,11 @@ const TagsInput = (props: TagsInputProps) => {
 
 
   const addTag = (event: any) => {
-    if (event.target.value !== "") {
-      const tagReplaced = event.target.value.replace(';', '')
+    if (event.target.value !== '') {
+      const tagReplaced = event.target.value
       setTags([...tags, tagReplaced])
       selectedTags([...tags, tagReplaced])
+
       event.target.value = ""
     }
   }
@@ -42,7 +43,7 @@ const TagsInput = (props: TagsInputProps) => {
       </ul>
       <input type="text"
         placeholder="Press enter to add"
-        onKeyUp={event => event.key === ";" && addTag(event)}
+        onKeyUp={event => event.key === "Enter" && addTag(event)}
       />
     </Container>
   )
