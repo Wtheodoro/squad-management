@@ -17,7 +17,8 @@ const TeamsList = () => {
     if (!list) {
       setList(myTeams)   
     }
-
+    
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count])
 
 
