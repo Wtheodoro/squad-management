@@ -7,9 +7,6 @@ interface ConfigureSquadFieldProps {
 }
 
 const ConfigureSquadField = (props: ConfigureSquadFieldProps) => {
-  // if (props.squad) {
-  //   console.log('field',props.squad)
-  // }
   return (
     <Container>
       <div className="squad">

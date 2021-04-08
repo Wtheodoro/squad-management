@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import ConfigureSquadField from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadField';
@@ -19,10 +19,6 @@ const AddTeam = () => {
 
   const dispatch = useDispatch()
   const history = useHistory()
-
-  useEffect(() => {
-    // console.log(club_cast)
-  }, [athletes])
 
   const registerTeam = (team: TeamType) => {
     team.tags = tags
@@ -52,7 +48,12 @@ const AddTeam = () => {
     <Container>
       <TopBar />
       <div className="content">
-        <h1>Create your team</h1>
+        <div className="top">
+          <h1>Create your team</h1>
+          <Link to="/">
+            <GradientButton>Home</GradientButton>
+          </Link>
+        </div>
 
           <form onSubmit={handleSubmit(registerTeam)} onKeyDown={(e) => checkKeyDown(e)}>
           <h2>Team information</h2>

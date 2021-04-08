@@ -8,13 +8,22 @@ export const Container = styled.div`
 
     h1 {
         padding: 1rem 1.5rem;
-        border-bottom: 1px solid rgb(227, 223,227);
-        color: rgb(88, 47, 140);
     }
 
     h2 {
         color: #808080;
         margin: 1rem 0;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(227, 223,227);
+        color: rgb(88, 47, 140);
+
+        a {
+            margin-right: 1.5rem;
+        }
     }
     
     .content {
@@ -29,13 +38,12 @@ export const Container = styled.div`
             flex-direction: column;
             align-content: space-between;
             align-items: center;
+            margin-bottom: 0;
 
             .team-information {
                 width: 100%;
                 display: flex;
                 justify-content: space-evenly;
-                /* align-items: center; */
-
             }
 
             .label-input {

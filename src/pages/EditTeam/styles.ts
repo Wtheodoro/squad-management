@@ -16,6 +16,17 @@ export const Container = styled.div`
         color: #808080;
         margin: 1rem 0;
     }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(227, 223,227);
+        color: rgb(88, 47, 140);
+
+        a {
+            margin-right: 1.5rem;
+        }
+    }
     
     .content {
         width: 95%;

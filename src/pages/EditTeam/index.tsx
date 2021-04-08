@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import ConfigureSquadField from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadField';
@@ -34,6 +34,10 @@ const EditTeam = (props: EditTeamLocationProps) => {
     
   }
 
+  const checkKeyDown = (e: any) => {
+    if (e.code === 'Enter') e.preventDefault()
+  }
+
   const searchAthlete = (e: string) => {
     return club_cast.filter(function(el) {
       return el.name.toLowerCase().indexOf(e) > -1
@@ -53,9 +57,14 @@ const EditTeam = (props: EditTeamLocationProps) => {
     <Container>
       <TopBar />
       <div className="content">
-        <h1>Edit your team</h1>
+        <div className="top">
+          <h1>Edit your team</h1>
+          <Link to="/">
+            <GradientButton>Home</GradientButton>
+          </Link>
+        </div>
 
-          <form onSubmit={handleSubmit(registerTeam)}>
+          <form onSubmit={handleSubmit(registerTeam)} onKeyDown={(e) => checkKeyDown(e)}>
           <h2>Team information</h2>
 
             <div className="team-information">

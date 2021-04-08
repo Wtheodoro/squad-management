@@ -5,7 +5,6 @@ export const Container = styled.div`
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
-    /* min-height: 3rem; */
     width:  30rem;
     padding: 0 8px;
     border: 1px solid #CCC;
