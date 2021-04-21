@@ -2,16 +2,16 @@ import { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import AthleteTrackDraggable from '../../components/CreateTeamSet/AthleteTrackDraggable';
 import ConfigureSquadFieldDraggable from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadFieldDraggable';
-import TagsInput from '../../components/CreateTeamSet/TagsInput';
-import GradientButton from '../../components/GradientButton';
 import { club_cast } from '../../utils/clubCast'
 import { Container } from './styles';
 
 const TEST = () => {
   const [reset, setReset] = useState<number>(0)
   const [athletes, setAthletes] = useState<any>(club_cast)
-  const [athletesOnField, setAthletesOnField] = useState<any>([])
-  
+  const elevenPositions = new Array(11)
+  const [athletesOnField, setAthletesOnField] = useState<any>(elevenPositions)
+
+  console.log(athletesOnField)
 
   // dnd
   const handleOnDragEnd = (result: any) => {
@@ -36,10 +36,60 @@ const TEST = () => {
       } else if (result.source.droppableId !== result.destination.droppableId) {
         // redorder athlete list
         const player = athletes[result.source.index]
-        setAthletesOnField([...athletesOnField, player])
+        player.droppableId = result.destination.droppableId
+
         // take out chosen atlhete from the list
         items.splice(result.destination.index, 0)
-        setAthletes(items)        
+        setAthletes(items) 
+
+        switch (result.destination.droppableId) {
+          case 'p-one':
+            itemsOnField[0] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-two':
+            itemsOnField[1] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-three':
+            itemsOnField[2] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-four':
+            itemsOnField[3] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-five':
+            itemsOnField[4] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-six':
+            itemsOnField[5] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-seven':
+            itemsOnField[6] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-eight':
+            itemsOnField[7] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-nine':
+            itemsOnField[8] = player
+            return setAthletesOnField(itemsOnField)
+      
+          case 'p-ten':
+            itemsOnField[9] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-eleven':
+            itemsOnField[10] = player
+            return setAthletesOnField(itemsOnField)
+
+          default:
+            break;
+        }       
       }
 
     } else if (result.source.droppableId !== 'athletes') {
@@ -49,17 +99,15 @@ const TEST = () => {
         const player = athletesOnField[result.source.index]
         setAthletes([...athletes, player])
         // take out chosen atlhete from the field
-        itemsOnField.splice(result.source.index, 1)
+        // atlhets on field always need to have 11 positions on array
+        itemsOnField.splice(result.source.index, 1, undefined)
         setAthletesOnField(itemsOnField)
 
   
-      // } else if (result.source.droppableId !== result.destination.droppableId) {
-      //   // redorder athlete list
-      //   const player = athletesOnField[result.source.index]
-      //   setAthletesOnField([...athletesOnField, player])
-      //   // take out chosen atlhete from the list
-      //   items.splice(result.destination.index, 0)
-      //   setAthletes(items)        
+      } else {
+        console.log("alteração dentro de campo")   
+        console.log(result)   
+        // Thinking about this code part.
       }
     }
   }
