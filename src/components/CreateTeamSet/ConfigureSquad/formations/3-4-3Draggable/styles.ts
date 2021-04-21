@@ -20,10 +20,10 @@ export const Container = styled.div`
         margin: 1.7rem 2.2rem;
         }
 
-    .def,
+    .defense,
     .middle-one,
     .middle-two,
-    .atk {
+    .attack {
         display: flex;    
     }
 
@@ -32,8 +32,13 @@ export const Container = styled.div`
     }
 
     .draggable {
-        width: 100%;
-        height: 100%;
-        background-color: red;
+        width: 130%;
+        height: 130%;
+        border-radius: 50%;
+        background-color: #FFF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center
     }
 `;

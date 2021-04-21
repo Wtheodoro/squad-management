@@ -52,7 +52,7 @@ const TEST = () => {
       <div className="warning">
         <h3>Pagina para testar o drag and down</h3>
         <p>Já é possivel reorganizar a lista de jogadores</p>
-        <p>Também é possivél posicionar o goleiro</p>
+        <p>Também é possivél posicionar os jogadores em campo</p>
       </div>
 
 
