@@ -8,30 +8,59 @@ import { club_cast } from '../../utils/clubCast'
 import { Container } from './styles';
 
 const TEST = () => {
+  const [reset, setReset] = useState<number>(0)
   const [athletes, setAthletes] = useState<any>(club_cast)
   const [athletesOnField, setAthletesOnField] = useState<any>([])
   
 
   // dnd
   const handleOnDragEnd = (result: any) => {
-    console.log(result)
+
     const items = Array.from(athletes)
     const [reorderedItem] = items.splice(result.source.index, 1)
+
+    const itemsOnField = Array.from(athletesOnField)
+
+
+
     // this if garante the app still wokrs when a draggable item is droped out of placeholder
     if(!result.destination) return
 
     // Check from where the result is comming
     if (result.source.droppableId === 'athletes') {
+
       if (result.source.droppableId === result.destination.droppableId) {
         items.splice(result.destination.index, 0, reorderedItem)
         setAthletes(items)
   
       } else if (result.source.droppableId !== result.destination.droppableId) {
+        // redorder athlete list
         const player = athletes[result.source.index]
         setAthletesOnField([...athletesOnField, player])
+        // take out chosen atlhete from the list
+        items.splice(result.destination.index, 0)
+        setAthletes(items)        
       }
-    } else {
-      // CODE
+
+    } else if (result.source.droppableId !== 'athletes') {
+      
+      if (result.destination.droppableId === 'athletes') {
+        // redorder athlete list
+        const player = athletesOnField[result.source.index]
+        setAthletes([...athletes, player])
+        // take out chosen atlhete from the field
+        itemsOnField.splice(result.source.index, 1)
+        setAthletesOnField(itemsOnField)
+
+  
+      // } else if (result.source.droppableId !== result.destination.droppableId) {
+      //   // redorder athlete list
+      //   const player = athletesOnField[result.source.index]
+      //   setAthletesOnField([...athletesOnField, player])
+      //   // take out chosen atlhete from the list
+      //   items.splice(result.destination.index, 0)
+      //   setAthletes(items)        
+      }
     }
   }
 
@@ -48,6 +77,7 @@ const TEST = () => {
   }
   
   return (
+    <>
     <Container>
       <div className="warning">
         <h3>Pagina para testar o drag and down</h3>
@@ -88,7 +118,12 @@ const TEST = () => {
           </Droppable>
         </div>
       </DragDropContext>
+
+
+
     </Container>
+      <button onClick={() => setReset(reset+1)}>reset component</button>
+      </>
   )
 }
 

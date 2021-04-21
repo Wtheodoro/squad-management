@@ -17,7 +17,7 @@ const ThreeFourThree = (props: FormationProps) => {
               <div className="player nine" {...provided.droppableProps} ref={provided.innerRef}>
                 {
                   squad.length > 8 ?
-                  <Draggable draggableId={squad[8].name} index={8}>
+                  <Draggable draggableId={squad[8].name} index={7}>
                     {(provided) => (
                       <div className="draggable"
                         ref={provided.innerRef}
@@ -42,7 +42,7 @@ const ThreeFourThree = (props: FormationProps) => {
               <div className="player ten" {...provided.droppableProps} ref={provided.innerRef}>
                 {
                   squad.length > 9 ?
-                  <Draggable draggableId={squad[9].name} index={9}>
+                  <Draggable draggableId={squad[9].name} index={8}>
                     {(provided) => (
                       <div className="draggable"
                         ref={provided.innerRef}
@@ -67,7 +67,7 @@ const ThreeFourThree = (props: FormationProps) => {
               <div className="player eleven" {...provided.droppableProps} ref={provided.innerRef}>
                 {
                   squad.length > 10 ?
-                  <Draggable draggableId={squad[10].name} index={10}>
+                  <Draggable draggableId={squad[10].name} index={9}>
                     {(provided) => (
                       <div className="draggable"
                         ref={provided.innerRef}
