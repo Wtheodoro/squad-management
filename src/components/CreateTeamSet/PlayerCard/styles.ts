@@ -39,13 +39,13 @@ export const CountryLabel = styled.p`
 export const NameLabel = styled.p`
     font-size: 4rem;
     position: absolute;
-    top: 70%;
+    top: 65%;
 `;
 
 export const AgeTeamCountry = styled.div`
     width: 25%;
     height: 80%;
-    background: linear-gradient(to top, #8F6B29, #DF9F28 );
+    background: linear-gradient(to top, #8F6B29, #8F6B29, #DF9F28, #FDE08D, #DF9F28 );
     position: absolute;
     left: 10%;
     display: flex;
