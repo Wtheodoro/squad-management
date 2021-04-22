@@ -24,3 +24,12 @@ export const Container = styled.div`
         }
     }
 `;
+
+export const Canvas = styled.div`
+    background-color: lightcoral;
+    min-height: 50vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+`;

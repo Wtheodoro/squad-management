@@ -2,16 +2,15 @@ import { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import AthleteTrackDraggable from '../../components/CreateTeamSet/AthleteTrackDraggable';
 import ConfigureSquadFieldDraggable from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadFieldDraggable';
+import PlayerCard from '../../components/CreateTeamSet/PlayerCard';
 import { club_cast } from '../../utils/clubCast'
-import { Container } from './styles';
+import { Container, Canvas } from './styles';
 
 const TEST = () => {
   const [reset, setReset] = useState<number>(0)
   const [athletes, setAthletes] = useState<any>(club_cast)
   const elevenPositions = new Array(11)
   const [athletesOnField, setAthletesOnField] = useState<any>(elevenPositions)
-
-  console.log(athletesOnField)
 
   // dnd
   const handleOnDragEnd = (result: any) => {
@@ -170,7 +169,12 @@ const TEST = () => {
 
 
     </Container>
-      <button onClick={() => setReset(reset+1)}>reset component</button>
+    <button onClick={() => setReset(reset+1)}>reset component</button>
+
+    <Canvas>
+                <PlayerCard />
+    </Canvas>
+
       </>
   )
 }
