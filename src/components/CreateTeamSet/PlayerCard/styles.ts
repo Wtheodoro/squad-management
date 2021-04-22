@@ -4,7 +4,6 @@ export const Container = styled.div`
     width: 21.875rem;
     height: 31.25rem;
     margin: 2rem;
-    background-color: lightgrey;
     position: relative;
     z-index: 1;
     overflow: hidden;

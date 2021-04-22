@@ -125,13 +125,15 @@ const TEST = () => {
   
   return (
     <>
-    <Container>
-      <div className="warning">
-        <h3>Pagina para testar o drag and down</h3>
-        <p>Já é possivel reorganizar a lista de jogadores</p>
-        <p>Também é possivél posicionar os jogadores em campo</p>
-      </div>
+    <div className="warning">
+      <h3>Pagina para testar o drag and down</h3>
+      <p>Já é possivel reorganizar a lista de jogadores</p>
+      <p>Também é possivél posicionar os jogadores em campo</p>
+    </div>
 
+    <Container>
+
+    <PlayerCard />
 
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <div className="field">
@@ -166,16 +168,9 @@ const TEST = () => {
         </div>
       </DragDropContext>
 
-
-
     </Container>
     <button onClick={() => setReset(reset+1)}>reset component</button>
-
-    <Canvas>
-                <PlayerCard />
-    </Canvas>
-
-      </>
+    </>
   )
 }
 

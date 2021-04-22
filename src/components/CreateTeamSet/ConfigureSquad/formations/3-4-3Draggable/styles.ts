@@ -10,8 +10,7 @@ export const Container = styled.div`
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        background-color: #FFF;
-        opacity: 0.5;
+        background-color: rgba(255, 255, 255, .5);
 
         display: flex;
         justify-content: center;
@@ -35,8 +34,8 @@ export const Container = styled.div`
         width: 130%;
         height: 130%;
         border-radius: 50%;
-        background-color: #FFF;
-
+        background-color: white;
+        opacity: 1;
         display: flex;
         justify-content: center;
         align-items: center
