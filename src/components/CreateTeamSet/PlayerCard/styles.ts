@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 21.875rem;
-    height: 31.25rem;
-    margin: 2rem;
+    width: 6.5626rem;
+    width: 5rem;
+    height: 9.375rem;
+    height: 8rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
 `;
 
 export const CardBody = styled.div`
-    width: 21.875rem;
-    height: 31.25rem;
-    border-radius: 100% 100% 100% 100%/ 25% 25% 100% 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
     background: linear-gradient(to top, #8F6B29, #8F6B29, #FDE08D, #DF9F28 );
     position: absolute;
     overflow: hidden;
@@ -22,23 +23,22 @@ export const CardBody = styled.div`
     align-items: center;
 
     > img {
-        height: 12rem;
+        height: 40%;
         position: absolute;
-        top: 15%;
-        
+        top: 30%;
     }
 `;
 
-export const CountryLabel = styled.p`
-    font-size: 2rem;
+export const PositionLabel = styled.p`
+    font-size: 0.8rem;
     position: absolute;
-    top: 0;
+    top: 1%;
 `;
 
 export const NameLabel = styled.p`
-    font-size: 4rem;
+    font-size: .9rem;
     position: absolute;
-    top: 65%;
+    top: 80%;
 `;
 
 export const AgeTeamCountry = styled.div`
@@ -47,12 +47,13 @@ export const AgeTeamCountry = styled.div`
     background: linear-gradient(to top, #8F6B29, #8F6B29, #DF9F28, #FDE08D, #DF9F28 );
     position: absolute;
     left: 10%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     > p {
-        font-size: 400%;
+        font-size: 1rem;
     }
 
     > img {

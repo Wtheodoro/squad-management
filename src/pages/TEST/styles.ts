@@ -7,8 +7,8 @@ export const Container = styled.div`
     margin-top: 2rem;
     
     .search-athlete {
-        width: 30rem;
-        max-height: 70vh;
+        width: 20rem;
+        max-height: 60vh;
         overflow-y: scroll;
         background-color: #232323;
 

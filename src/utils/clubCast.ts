@@ -12,14 +12,14 @@ export const club_cast = [
         nacionality: 'Argentina',
         age: 30,
         club: 'Athletico Paranaense',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Márcio Azevedo',
         nacionality: 'Brasil',
         age: 30,
         club: 'Athletico Paranaense',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Denner Fernando Melz',
@@ -100,14 +100,14 @@ export const club_cast = [
         nacionality: 'Brasil',
         age: 29,
         club: 'Atlético Goianiense',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Everton Felipe',
         nacionality: 'Brasil',
         age: 29,
         club: 'Atlético Goianiense',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Roberson',
@@ -192,7 +192,8 @@ export const club_cast = [
         name: 'Cléber',
         nacionality: 'Brasil',
         age: 28,
-        club: 'Atlético Mineiro'
+        club: 'Atlético Mineiro',
+        position: 'Defensor'
     },
     {
         name: 'Léo Silva',
@@ -247,14 +248,14 @@ export const club_cast = [
         nacionality: 'Brasil',
         age: 28,
         club: 'Atlético Mineiro',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Ronaldinho Gaúcho',
         nacionality: 'Brasil',
         age: 28,
         club: 'Atlético Mineiro',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Dadá Maravilha',
@@ -331,7 +332,7 @@ export const club_cast = [
         nacionality: 'Brasil',
         age: 27,
         club: 'Bahia',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Lucas Fonseca',
@@ -430,42 +431,42 @@ export const club_cast = [
         nacionality: 'Brasil',
         age: 26,
         club: 'Botafogo',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Martim Silveira',
         nacionality: 'Brasil',
         age: 26,
         club: 'Botafogo',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Nei Conceição',
         nacionality: 'Brasil',
         age: 26,
         club: 'Botafogo',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Seedorf',
         nacionality: 'Suriname/Holanda',
         age: 26,
         club: 'Botafogo',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Túlio',
         nacionality: 'Brasil',
         age: 26,
         club: 'Botafogo',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Valdo',
         nacionality: 'Brasil',
         age: 26,
         club: 'Botafogo',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Abelardo de Lamare',
@@ -578,28 +579,28 @@ export const club_cast = [
         nacionality: 'Brasil',
         age: 31,
         club: 'Ceará',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Fabinho',
         nacionality: 'Brasil',
         age: 31,
         club: 'Ceará',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Oliveira',
         nacionality: 'Brasil',
         age: 31,
         club: 'Ceará',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Fernando Sobral',
         nacionality: 'Brasil',
         age: 31,
         club: 'Ceará',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Yony González',
@@ -706,56 +707,56 @@ export const club_cast = [
         nacionality: 'Equador',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Rómulo Otero',
         nacionality: 'Venezuela',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Luan',
         nacionality: 'Brasil',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Maheus Araújo',
         nacionality: 'Brasil',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Gabriel',
         nacionality: 'Brasil',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Ramiro',
         nacionality: 'Brasil',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Camacho',
         nacionality: 'Brasil',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Victor Cantillo',
         nacionality: 'Colômbia',
         age: 27,
         club: 'Corinthians',
-        position: 'Meio-campista'
+        position: 'Meio'
     },
     {
         name: 'Cauê',

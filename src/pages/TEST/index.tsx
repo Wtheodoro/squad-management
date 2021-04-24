@@ -177,7 +177,7 @@ const TEST = () => {
 
     <Container>
 
-    <PlayerCard />
+    <PlayerCard age={"27"} name={"Walison Teodoro"} position={"Atacante"}/>
 
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <div className="field">

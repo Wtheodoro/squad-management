@@ -1,4 +1,5 @@
 import { Droppable, Draggable } from 'react-beautiful-dnd';
+import PlayerCard from '../../../PlayerCard';
 import { Container } from './styles';
 
 interface FormationProps {
@@ -24,12 +25,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[8].name}</p>
+                        <PlayerCard
+                          name={squad[8].name}
+                          age={squad[8].age}
+                          position={squad[8].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>9</p>
+                  <div className="empty"><p>9</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -49,12 +54,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[9].name}</p>
+                        <PlayerCard
+                          name={squad[9].name}
+                          age={squad[9].age}
+                          position={squad[9].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>10</p>
+                  <div className="empty"><p>10</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -74,12 +83,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[10].name}</p>
+                        <PlayerCard
+                          name={squad[10].name}
+                          age={squad[10].age}
+                          position={squad[10].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>11</p>
+                  <div className="empty"><p>11</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -101,12 +114,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[7].name}</p>
+                        <PlayerCard
+                          name={squad[7].name}
+                          age={squad[7].age}
+                          position={squad[7].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>8</p>
+                  <div className="empty"><p>8</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -129,12 +146,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[4].name}</p>
+                        <PlayerCard
+                          name={squad[4].name}
+                          age={squad[4].age}
+                          position={squad[4].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>5</p>
+                  <div className="empty"><p>5</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -154,12 +175,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[5].name}</p>
+                        <PlayerCard
+                          name={squad[5].name}
+                          age={squad[5].age}
+                          position={squad[5].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>6</p>
+                  <div className="empty"><p>6</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -179,12 +204,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[6].name}</p>
+                        <PlayerCard
+                          name={squad[6].name}
+                          age={squad[6].age}
+                          position={squad[6].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>7</p>
+                  <div className="empty"><p>7</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -207,12 +236,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[1].name}</p>
+                        <PlayerCard
+                          name={squad[1].name}
+                          age={squad[1].age}
+                          position={squad[1].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>2</p>
+                  <div className="empty"><p>2</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -232,12 +265,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[2].name}</p>
-                      </div>
-                    )}
-                  </Draggable>
-                  :
-                  <p>3</p>
+                        <PlayerCard
+                          name={squad[2].name}
+                          age={squad[2].age}
+                          position={squad[2].position}
+                        />
+                    </div>
+                  )}
+                </Draggable>
+                :
+                <div className="empty"><p>3</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -257,12 +294,16 @@ const ThreeFourThree = (props: FormationProps) => {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <p>{squad[3].name}</p>
+                        <PlayerCard
+                          name={squad[3].name}
+                          age={squad[3].age}
+                          position={squad[3].position}
+                        />
                       </div>
                     )}
                   </Draggable>
                   :
-                  <p>4</p>
+                  <div className="empty"><p>4</p></div>
                 }
                 {provided.placeholder}
               </div>
@@ -284,12 +325,16 @@ const ThreeFourThree = (props: FormationProps) => {
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                     >
-                      <p>{squad[0].name}</p>
+                      <PlayerCard
+                        name={squad[0].name}
+                        age={squad[0].age}
+                        position={squad[0].position}
+                      />
                     </div>
                   )}
                 </Draggable>
                 :
-                <p>1</p>
+                <div className="empty"><p>1</p></div>
               }
               {provided.placeholder}
             </div>
