@@ -4,7 +4,7 @@ import AthleteTrackDraggable from '../../components/CreateTeamSet/AthleteTrackDr
 import ConfigureSquadFieldDraggable from '../../components/CreateTeamSet/ConfigureSquad/ConfigureSquadFieldDraggable';
 import PlayerCard from '../../components/CreateTeamSet/PlayerCard';
 import { club_cast } from '../../utils/clubCast'
-import { Container, Canvas } from './styles';
+import { Container } from './styles';
 
 const TEST = () => {
   const [reset, setReset] = useState<number>(0)
@@ -14,13 +14,9 @@ const TEST = () => {
 
   // dnd
   const handleOnDragEnd = (result: any) => {
-
     const items = Array.from(athletes)
     const [reorderedItem] = items.splice(result.source.index, 1)
-
     const itemsOnField = Array.from(athletesOnField)
-
-
 
     // this if garante the app still wokrs when a draggable item is droped out of placeholder
     if(!result.destination) return
@@ -104,9 +100,57 @@ const TEST = () => {
 
   
       } else {
-        console.log("alteração dentro de campo")   
-        console.log(result)   
-        // Thinking about this code part.
+
+        const player = athletesOnField[result.source.index]
+        itemsOnField[result.source.index] = undefined
+        switch (result.destination.droppableId) {
+          case 'p-one':
+            itemsOnField[0] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-two':
+            itemsOnField[1] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-three':
+            itemsOnField[2] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-four':
+            itemsOnField[3] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-five':
+            itemsOnField[4] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-six':
+            itemsOnField[5] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-seven':
+            itemsOnField[6] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-eight':
+            itemsOnField[7] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-nine':
+            itemsOnField[8] = player
+            return setAthletesOnField(itemsOnField)
+      
+          case 'p-ten':
+            itemsOnField[9] = player
+            return setAthletesOnField(itemsOnField)
+
+          case 'p-eleven':
+            itemsOnField[10] = player
+            return setAthletesOnField(itemsOnField)
+
+          default:
+            break;
+        } 
       }
     }
   }

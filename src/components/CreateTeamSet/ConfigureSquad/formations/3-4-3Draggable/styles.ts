@@ -38,6 +38,7 @@ export const Container = styled.div`
         opacity: 1;
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
+        z-index: 1;
     }
 `;
