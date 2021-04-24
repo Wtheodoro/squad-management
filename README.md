@@ -41,3 +41,5 @@ You can keep an eye on this repository if you want to see it complete.
 
 - Implement Drag and Drop
 - Set players squad on team object
+
+![GIF](https://github.com/Wtheodoro/squad-management/blob/main/public/gif/test-dnd.gif)
